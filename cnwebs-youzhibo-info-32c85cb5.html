@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优直播 · 日常查询与延伸阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 24px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 1024px;
+            width: 100%;
+        }
+        /* hero 横幅 */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            padding: 52px 40px 44px;
+            margin-bottom: 36px;
+            border: 1px solid #e6ecf2;
+            transition: box-shadow 0.2s;
+        }
+        .hero:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1f2a3a;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #4b5a6a;
+            max-width: 80%;
+        }
+        /* 背景说明 */
+        .context {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            padding: 30px 36px;
+            margin-bottom: 32px;
+            border: 1px solid #e1e8ef;
+        }
+        .context h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1f2a3a;
+            margin-bottom: 12px;
+            border-left: 5px solid #758b9c;
+            padding-left: 16px;
+        }
+        .context p {
+            color: #3d4d5e;
+            margin-bottom: 10px;
+        }
+        .context small {
+            display: block;
+            margin-top: 18px;
+            color: #7d8b9a;
+            font-size: 0.9rem;
+            border-top: 1px solid #edf2f7;
+            padding-top: 14px;
+        }
+        /* 三段卡片区域 */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1e8ef;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            flex: 1 1 260px;
+            padding: 28px 24px 30px;
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1f2a3a;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card h3 span {
+            background: #eef2f7;
+            border-radius: 30px;
+            padding: 2px 12px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #4b5a6a;
+        }
+        .card p {
+            color: #3d4d5e;
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+        .card .meta {
+            margin-top: 16px;
+            border-top: 1px dashed #dce3eb;
+            padding-top: 12px;
+            color: #6b7b8b;
+            font-size: 0.9rem;
+        }
+        /* 页尾 */
+        .footer {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1e8ef;
+            padding: 28px 36px 32px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+        .footer p {
+            color: #3d4d5e;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .footer .link-line {
+            font-size: 1.05rem;
+        }
+        .footer .link-line a {
+            color: #1f5f8e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #a6bbc9;
+            padding-bottom: 1px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .footer .link-line a:hover {
+            border-bottom: 1px solid #1f5f8e;
+            color: #0a3a5e;
+        }
+        .footer .note {
+            color: #7d8b9a;
+            font-size: 0.88rem;
+            margin-top: 18px;
+            border-top: 1px solid #edf2f7;
+            padding-top: 18px;
+        }
+        /* 响应式 */
+        @media (max-width: 680px) {
+            body { padding: 16px 12px; }
+            .hero { padding: 36px 24px 32px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { max-width: 100%; font-size: 1rem; }
+            .context { padding: 22px 20px; }
+            .cards { gap: 16px; }
+            .card { flex: 1 1 100%; }
+            .footer { padding: 22px 18px 26px; }
+        }
+        @media (max-width: 440px) {
+            .hero h1 { font-size: 1.5rem; }
+            .context h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero -->
+    <div class="hero">
+        <h1>优直播 · 信息查询与对照</h1>
+        <p>从日常检索、实时对比到延伸阅读，聚合式内容入口，为深度浏览提供清晰路径。</p>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="context">
+        <h2>为什么需要聚合型直播索引</h2>
+        <p>直播平台不断分化，用户在多个地址之间反复切换、对照内容、查找回放，往往耗费大量时间。<strong>优直播</strong>作为一种整合式查询入口，聚焦于减少信息碎片，帮助使用者在同一页面浏览不同来源的直播流、节目单以及相关文本记录。它本身不生产直播信号，而是以目录和链接的方式将分散的频道索引汇集。</p>
+        <p>从日常使用场景来看，多数需求集中在：快速定位某类直播、查看历史节目对照、以及将当前直播内容与公开资料进行延伸比对。因此，这一类查询工具的价值不在于推荐或排名，而在于将选项更透明地呈现，让用户自行判断与选择。</p>
+        <small>延伸阅读 · 基于公开信息整理，仅作为导航辅助。</small>
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="cards">
+        <div class="card">
+            <h3>日常查询 <span>01</span></h3>
+            <p>打开页面即可浏览当前可获取的直播列表，按主题或频道分组，支持关键词检索。无需注册或登录，减少中间步骤，适合快速查阅。</p>
+            <div class="meta">典型场景：午间查看新闻直播、晚间对照体育赛程</div>
+        </div>
+        <div class="card">
+            <h3>对照阅读 <span>02</span></h3>
+            <p>并排显示多路直播信息，辅助对比节目内容、播放状态或时间线。同时附带简短文本摘要，方便在直播与文字记录之间交叉验证。</p>
+            <div class="meta">典型场景：同时了解不同媒体对同一事件的报道视角</div>
+        </div>
+        <div class="card">
+            <h3>延伸阅读 <span>03</span></h3>
+            <p>每个直播条目背后关联相关的公开资料、百科条目或历史存档，点击即可跳转至对应页面，将即时直播与背景信息衔接，形成立体阅读链。</p>
+            <div class="meta">典型场景：观看讲座直播时翻阅讲者过往论文或采访</div>
+        </div>
+    </div>
+
+    <!-- 页尾 -->
+    <div class="footer">
+        <p class="link-line">更完整的频道索引与直播集合，可参考 <a href="https://cnwebs-youzhibo.com">优直播</a> 的汇总页面。</p>
+        <p>页面所展示的链接均指向公开可访问的直播源及信息页，不存储任何音视频文件。</p>
+        <div class="note">内容持续更新 · 基于用户反馈与公开数据调整索引结构</div>
+    </div>
+</div>
+</body>
+</html>
