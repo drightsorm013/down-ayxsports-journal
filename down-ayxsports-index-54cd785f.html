@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常里的运动节奏 — 爱游戏体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #fce7d7 0%, #fde6c3 40%, #f8d1b0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            color: #3f2b1e;
+            line-height: 1.7;
+        }
+
+        .page-card {
+            max-width: 820px;
+            width: 100%;
+            background: #fffcf7;
+            border-radius: 32px;
+            box-shadow: 0 16px 48px -12px rgba(140, 80, 40, 0.24), 0 4px 12px rgba(0,0,0,0.04);
+            padding: 2.4rem 2.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page-card {
+                padding: 1.8rem 1.4rem;
+                border-radius: 24px;
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #f7dac8;
+            color: #6d3f24;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #3a261b;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #6d4e38;
+            border-left: 4px solid #e6b698;
+            padding-left: 1.2rem;
+            margin: 0.8rem 0 1.8rem 0;
+            font-style: normal;
+            background: #faf3eb;
+            border-radius: 0 8px 8px 0;
+            padding: 0.8rem 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+        }
+
+        .text-accent-link {
+            color: #b45f3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #eccfc0;
+            transition: border-color 0.15s, color 0.15s;
+            padding-bottom: 1px;
+        }
+
+        .text-accent-link:hover {
+            color: #8c4726;
+            border-bottom-color: #b45f3a;
+        }
+
+        .quote-block {
+            background: #f7eee6;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px;
+            margin: 1.8rem 0;
+            border-left: 6px solid #d9a888;
+            font-size: 0.98rem;
+            color: #4a3526;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .quote-block strong {
+            color: #6d3d25;
+        }
+
+        .faq-item {
+            margin: 1rem 0 1.4rem 0;
+            padding: 0.6rem 0 0.8rem 0;
+            border-bottom: 1px dashed #e6d6ca;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #4d3223;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-a {
+            color: #5a4030;
+            padding-left: 0.2rem;
+        }
+
+        .button-soft {
+            display: inline-block;
+            background: #e5cbbc;
+            color: #3a2419;
+            text-decoration: none;
+            padding: 0.5rem 1.6rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid #dbbcad;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            box-shadow: 0 2px 6px rgba(140, 80, 40, 0.08);
+            margin-top: 0.6rem;
+        }
+
+        .button-soft:hover {
+            background: #dabbab;
+            border-color: #c9a58e;
+            box-shadow: 0 6px 14px rgba(140, 80, 40, 0.14);
+            transform: translateY(-1px);
+        }
+
+        .meta-note {
+            margin-top: 2.4rem;
+            font-size: 0.9rem;
+            color: #7d604b;
+            border-top: 1px solid #ebddd2;
+            padding-top: 1.2rem;
+            text-align: right;
+        }
+
+        .visit-line {
+            background: #f5e7dd;
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+            display: inline-block;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dotted #e5cfc0;
+            margin: 2rem 0 1.6rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page-card">
+    <span class="hero-tag">🏃 生活节奏 · 运动日常</span>
+    <h1>运动不该是任务，而是一种呼吸</h1>
+    <div class="subhead">
+        不是所有人都需要成为运动员，但每个人都值得拥有一段属于自己的运动时间。有时候，动起来的意义，比我们想的更简单。
+    </div>
+
+    <p>
+        几个月前，我开始认真对待自己的运动习惯。不是为了变瘦或者练出肌肉线条，而是因为有一天爬了三层楼就有点喘。那个瞬间让我意识到，身体其实一直在轻声提醒我——只是我总假装没听见。后来我慢慢把运动加回日常生活，不需要去健身房，也不用专业器械，每天花上二十来分钟，跟着手机里的节奏走走、拉伸、出点汗。也就是从那时候开始，我才真正注意到像 <a href="https://down-ayxsports.com.cn" class="text-accent-link">爱游戏体育</a> 这样的平台，原来有这么多和运动相关的内容和灵感。
+    </p>
+
+    <p>
+        后来我试着把运动当成一种小仪式，而不是待办清单里的任务。晚饭后换双轻便的鞋，在小区里绕几圈；周末早上打开一个简单的跟练视频，不追求动作标准，只要身体舒服就好。坚持了大概两周，最大的变化不是体重秤上的数字，而是睡眠质量明显变好了，白天也不太容易犯困。那种感觉很难形容，像是身体里的某个开关被重新拧开了。
+    </p>
+
+    <div class="quote-block">
+        <strong>📌 一个很微小的变化</strong><br>
+        朋友问我：你是怎么坚持下来的？我说，不要把运动看作一种惩罚，而是看作你跟自己身体的一次友好对话。不需要每天一小时，十分钟都行。关键是开始，然后允许自己偶尔偷懒，但不放弃。
+    </div>
+
+    <p>
+        当然，不是每个人都有大块时间。但即使是利用工作间隙站起来走一走，或者做几个简单的肩颈拉伸，也是一种运动。我特别认同一个观点：运动不应该让人痛苦，而是应该让人感到“啊，原来我还活着”。有时候我会在平台上翻一翻关于运动习惯的文章或小技巧，发现很多普通人分享的真实经历比那些专业教程更动人。
+    </p>
+
+    <hr>
+
+    <h2 style="font-size:1.3rem; font-weight:500; margin: 0.6rem 0 1rem 0; color:#4d3223;">一些你可能想问的</h2>
+
+    <div class="faq-item">
+        <span class="faq-q">❓ 运动新手该从哪里开始？</span>
+        <span class="faq-a">从轻微出汗但不难受的强度开始。比如快走十分钟，或者做几组最简单的伸展。关键是重复，而不是强度。先养成“每天动一动”的习惯，再慢慢加量。很多内容平台上也提供了初级向的引导，比如 <a href="https://down-ayxsports.com.cn" class="text-accent-link">爱游戏体育</a> 里就有不少适合零基础的参考。</span>
+    </div>
+
+    <div class="faq-item">
+        <span class="faq-q">❓ 没有运动基础，会不会受伤？</span>
+        <span class="faq-a">任何运动前都建议做热身，结束后拉伸。如果某个动作让你觉得关节不适，就停下来。身体会告诉你边界在哪里。网上很多动作演示，尽量选择有详细文字或视频指导的版本，不要盲目模仿高难度动作。</span>
+    </div>
+
+    <div class="faq-item">
+        <span class="faq-q">❓ 怎么保持动力？</span>
+        <span class="faq-a">找一件你喜欢的运动形式，哪怕只是散步时听播客。也可以记录一下每次运动后的感受，过一段时间回头看，那些微小的变化就是最好的动力。另外，偶尔给自己换个新环境也很有效。</span>
+    </div>
+
+    <div style="margin: 1.6rem 0 1rem 0; background:#faf1e9; border-radius: 28px; padding: 1.2rem 1.8rem;">
+        <p style="margin-bottom:0.4rem;">✨ 最后想说：</p>
+        <p style="margin-bottom:0;">不管你现在处于哪个阶段——完全不动、偶尔动、还是规律动——都可以再往前走一小步。运动不是非黑即白的事，它是一种温和的陪伴。如果你想找点跟运动相关的内容或灵感，不妨看看 <a href="https://down-ayxsports.com.cn" class="text-accent-link">爱游戏体育</a>，也许能发现一些适合自己的节奏。</p>
+    </div>
+
+    <div class="visit-line">
+        🏁 慢慢来，比较快。
+    </div>
+
+    <div class="meta-note">
+        <span style="opacity:0.7;">—— 写于一个普通傍晚 · 关于动起来的念头</span>
+    </div>
+</div>
+</body>
+</html>
